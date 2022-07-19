@@ -1,0 +1,12 @@
+<h1>{{ appName }}</h1>
+<h2>Event Binding</h2>
+<button (click)="showData($event)">Click here</button>
+<br>
+<button on-click="showData($event)">Click here</button>
+
+<p [class]="myCSSClass">This paragraph class comes from *myClass* property.</p>
+<p [class.blue]="applyCSSClass">This paragraph class does not apply.</p>
+<p [style.color]="myColor">Text color is styled using style binding.</p>
+
+<input type="text" [(ngModel)]="userName" />
+<p>Two way binding! Hello {{ userName }}!</p>
