@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-@Input() userName: string;
+@Input() 
 
 @Component({
   selector: 'app-child',
