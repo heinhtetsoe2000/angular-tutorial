@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
+import { Observable, Observer } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -46,6 +47,23 @@ export class TestComponent implements OnInit {
   ];
 
   name: string = 'Peter';
+
+  presentDate = new Date();
+
+  timeChange = new Observable<string>((observer: Observer<string>) => {
+    setInterval(() => observer.next(new Date().toString()), 1000);
+  });
+
+  price: number = 20000;
+
+  Fruits = ["Apple", "Orange", "Grapes", "Mango", "Kiwi", "Pomegranate"];
+  
+  decimalNum1: number = 0.8178;
+  decimalNum2: number = 5.43;
+
+  jsonData = { id: 'one', name: { username: 'user1' } }
+  
+  digits: number = 100;
 
   constructor() { }
 

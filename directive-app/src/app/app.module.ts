@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { CustomstyleDirective } from './customstyle.directive';
 import { ChildComponent } from './child/child.component';
+import { DigitcountPipe } from './digitcount.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     CustomstyleDirective,
-    ChildComponent
+    ChildComponent,
+    DigitcountPipe
   ],
   imports: [
     BrowserModule
