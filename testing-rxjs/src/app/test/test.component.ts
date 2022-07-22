@@ -43,8 +43,8 @@ export class TestComponent implements OnInit {
       headers: { 'Content-Type': 'application/text' },
       body: "Hello"
     });
-    api$.subscribe(res => this.apiMessage = res.response.data);
-    const clickEvent$ = fromEvent(document.getElementById('counter'), 'click');
+    api$.subscribe((res: any) => this.apiMessage = res.response.data);
+    const clickEvent$ = fromEvent(document.getElementById("counter") as HTMLElement, 'click');
     clickEvent$.subscribe(() => this.counter++);
   }
 
