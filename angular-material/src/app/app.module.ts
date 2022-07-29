@@ -29,6 +29,27 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
 
+// Button Toggle component
+import { ButtonToggleMaterialComponent } from './components/button-toggle-material/button-toggle-material.component';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+
+// Card and Progress Bar component
+import { CardAndProgressBarMaterialComponent } from './components/card-and-progress-bar-material/card-and-progress-bar-material.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
+// Checkbox component
+import { CheckboxMaterialComponent } from './components/checkbox-material/checkbox-material.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
+// Chips component
+import { ChipsMaterialComponent } from './components/chips-material/chips-material.component';
+import { MatChipsModule } from '@angular/material/chips';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
+// Datepicker component
+import { DatepickerMaterialComponent } from './components/datepicker-material/datepicker-material.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -38,7 +59,12 @@ import { MatButtonModule } from '@angular/material/button';
     BadgeMaterialComponent,
     BottomSheetMaterialComponent,
     BottomSheetOverviewExampleSheetComponent,
-    ButtonAndIconMaterialComponent
+    ButtonAndIconMaterialComponent,
+    ButtonToggleMaterialComponent,
+    CardAndProgressBarMaterialComponent,
+    CheckboxMaterialComponent,
+    ChipsMaterialComponent,
+    DatepickerMaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -55,6 +81,13 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatDividerModule,
     MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    DragDropModule,
+    MatDatepickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
