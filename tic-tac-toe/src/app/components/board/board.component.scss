@@ -1,0 +1,29 @@
+main {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 0px;
+  margin: 0 auto;
+  width: 606px;
+}
+
+section {
+  width: 300px;
+  float: left;
+}
+
+section button {
+  margin: 100px auto;
+  width: 134.23px;
+  display: block;
+}
+
+.clearfix::after {
+  clear: both;
+  display: table;
+  content: '';
+}
+
+app-square {
+  border: 1px gray solid;
+  height: 200px;
+}

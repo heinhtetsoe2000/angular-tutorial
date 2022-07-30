@@ -1,0 +1,13 @@
+<section class="clearfix">
+  <button mat-raised-button color="primary" (click)="newGame()">Start New Game</button>
+  <h2 *ngIf="!winner; else elseBlock">Current player: {{ player }}</h2>
+  <ng-template #elseBlock>Player {{ winner }} won the game.</ng-template>
+</section>
+
+<main>
+  <app-square *ngFor="let val of squares; let i = index;" 
+              [value]="val"
+              (click)="makeMove(i)">
+
+  </app-square>
+</main>
