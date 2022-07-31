@@ -50,7 +50,88 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 // Datepicker component
 import { DatepickerMaterialComponent } from './components/datepicker-material/datepicker-material.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
+// Dialog component
+import { DialogMaterialComponent } from './components/dialog-material/dialog-material.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogContentExampleDialogComponent } from './components/dialog-content-example-dialog/dialog-content-example-dialog.component';
+
+// Expansion Panel component
+import { ExpansionPanelMaterialComponent } from './components/expansion-panel-material/expansion-panel-material.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+
+// Grid List component
+import { GridListMaterialComponent } from './components/grid-list-material/grid-list-material.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+
+// Menu component
+import { MenuMaterialComponent } from './components/menu-material/menu-material.component';
+import { MatMenuModule } from '@angular/material/menu';
+
+// Paginator component
+import { PaginatorMaterialComponent } from './components/paginator-material/paginator-material.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+// Progress Spinner component
+import { ProgressSpinnerMaterialComponent } from './components/progress-spinner-material/progress-spinner-material.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+// Radio Button component
+import { RadioButtonMaterialComponent } from './components/radio-button-material/radio-button-material.component';
+import { MatRadioModule } from '@angular/material/radio';
+
+// Ripple component
+import { RippleMaterialComponent } from './components/ripple-material/ripple-material.component';
+import { MatRippleModule } from '@angular/material/core';
+
+// Select component
+import { SelectMaterialComponent } from './components/select-material/select-material.component';
+import { MatSelectModule } from '@angular/material/select';
+
+// Sidenav component
+import { SidenavMaterialComponent } from './components/sidenav-material/sidenav-material.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
+// Slide toggle component
+import { SlideToggleMaterialComponent } from './components/slide-toggle-material/slide-toggle-material.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
+// Slider component
+import { SliderMaterialComponent } from './components/slider-material/slider-material.component';
+import { MatSliderModule } from '@angular/material/slider';
+
+// Snackbar component
+import { SnackbarMaterialComponent } from './components/snackbar-material/snackbar-material.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+// Sort Header component
+import { SortHeaderMaterialComponent } from './components/sort-header-material/sort-header-material.component';
+import { MatSortModule } from '@angular/material/sort';
+
+// Stepper component
+import { StepperMaterialComponent } from './components/stepper-material/stepper-material.component';
+import { MatStepperModule } from '@angular/material/stepper';
+
+// Table component
+import { TableMaterialComponent } from './components/table-material/table-material.component';
+import { MatTableModule } from '@angular/material/table';
+
+// Tab component
+import { TabMaterialComponent } from './components/tab-material/tab-material.component';
+import { MatTabsModule } from '@angular/material/tabs';
+
+// Toolbar component
+import { ToolbarMaterialComponent } from './components/toolbar-material/toolbar-material.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+// Tooltip component
+import { TooltipMaterialComponent } from './components/tooltip-material/tooltip-material.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+// Tree component
+import { TreeMaterialComponent } from './components/tree-material/tree-material.component';
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   declarations: [
@@ -64,7 +145,28 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     CardAndProgressBarMaterialComponent,
     CheckboxMaterialComponent,
     ChipsMaterialComponent,
-    DatepickerMaterialComponent
+    DatepickerMaterialComponent,
+    DialogMaterialComponent,
+    DialogContentExampleDialogComponent,
+    ExpansionPanelMaterialComponent,
+    GridListMaterialComponent,
+    MenuMaterialComponent,
+    PaginatorMaterialComponent,
+    ProgressSpinnerMaterialComponent,
+    RadioButtonMaterialComponent,
+    RippleMaterialComponent,
+    SelectMaterialComponent,
+    SidenavMaterialComponent,
+    SlideToggleMaterialComponent,
+    SliderMaterialComponent,
+    SnackbarMaterialComponent,
+    SortHeaderMaterialComponent,
+    StepperMaterialComponent,
+    TableMaterialComponent,
+    TabMaterialComponent,
+    ToolbarMaterialComponent,
+    TooltipMaterialComponent,
+    TreeMaterialComponent
   ],
   imports: [
     BrowserModule,
@@ -88,6 +190,27 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatChipsModule,
     DragDropModule,
     MatDatepickerModule,
+    MatNativeDateModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatSliderModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatStepperModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
