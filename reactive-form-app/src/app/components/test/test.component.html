@@ -1,0 +1,20 @@
+<div>
+  <h2>Registration Info</h2>
+  <form class="container" novalidate>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Enter your name</mat-label>
+      <input aria-label="Name" placeholder="Jaden" matInput [formControl]="name" required>
+      <mat-error *ngIf="name.invalid"> {{ getNameErrorMessage() }} </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="name@gmail.com" [formControl]="email" required>
+      <mat-error *ngIf="email.invalid"> {{ getEmailErrorMessage() }} </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Enter your phone number</mat-label>
+      <input matInput placeholder="09123456789" [formControl]="phone" required>
+      <mat-error *ngIf="phone.invalid"> {{ getPhoneErrorMessage() }} </mat-error>
+    </mat-form-field>
+  </form>
+</div>
