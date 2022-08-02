@@ -1,20 +1,51 @@
-<div>
-  <h2>Registration Info</h2>
-  <form class="container" novalidate>
+<mat-card>
+  <mat-card-title>Registration Info</mat-card-title>
+  <mat-divider inset></mat-divider>
+  <form class="container" [formGroup]="requiredForm" novalidate>
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Enter your name</mat-label>
-      <input aria-label="Name" placeholder="Jaden" matInput [formControl]="name" required>
-      <mat-error *ngIf="name.invalid"> {{ getNameErrorMessage() }} </mat-error>
+      <input placeholder="Jaden" matInput formControlName="name" required>
+      <mat-error *ngIf="requiredForm.controls['name'].errors?.['required']"> Name is required </mat-error>
     </mat-form-field>
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="name@gmail.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid"> {{ getEmailErrorMessage() }} </mat-error>
+      <input matInput placeholder="name@gmail.com" formControlName="email" required>
+      <mat-error *ngIf="requiredForm.controls['email'].errors?.['required']"> Email is required </mat-error>
     </mat-form-field>
     <mat-form-field class="full-width" appearance="fill">
       <mat-label>Enter your phone number</mat-label>
-      <input matInput placeholder="09123456789" [formControl]="phone" required>
-      <mat-error *ngIf="phone.invalid"> {{ getPhoneErrorMessage() }} </mat-error>
+      <input matInput placeholder="09123456789" formControlName="phone" required>
+      <mat-error *ngIf="requiredForm.controls['phone'].errors?.['required']">Phone number is required </mat-error>
     </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Enter your Birthdate</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="requiredForm.controls['date'].errors?.['required']">Birthdate is required </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Choose your Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option *ngFor="let gender of genders" [value]="gender">
+          {{gender}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="requiredForm.controls['gender'].errors?.['required']">Gender is required </mat-error>
+    </mat-form-field>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-stroked-button color="accent" type="reset">Clear</button>
+    </mat-card-actions>
   </form>
-</div>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Form Information</mat-card-title>
+  <mat-divider inset></mat-divider>
+  <mat-card-content>
+    <p>Form value: {{ requiredForm.value | json }}</p>
+    <p>Form status: {{ requiredForm.status | json }}</p>
+  </mat-card-content>
+</mat-card>
