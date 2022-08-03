@@ -10,13 +10,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './components/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { LogoutComponent } from './components/logout/logout.component';
+import { Routes, RouterModule } from '@angular/router';
+import { ExpenseGuard } from './expense.guard';
+
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'expenses', component: ExpenseEntryListComponent, canActivate: [ExpenseGuard] },
+  { path: 'expenses/detail/:id', component: ExpenseEntryComponent, canActivate: [ExpenseGuard] },
+  { path: '', redirectTo: 'expenses', pathMatch: 'full' }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
     ExpenseEntryComponent,
     ExpenseEntryListComponent,
-    DebugComponent
+    DebugComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +41,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     MatButtonModule,
     MatIconModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
