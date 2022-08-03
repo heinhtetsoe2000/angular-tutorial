@@ -14,16 +14,6 @@ import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { LogoutComponent } from './components/logout/logout.component';
-import { Routes, RouterModule } from '@angular/router';
-import { ExpenseGuard } from './expense.guard';
-
-const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'logout', component: LogoutComponent },
-  { path: 'expenses', component: ExpenseEntryListComponent, canActivate: [ExpenseGuard] },
-  { path: 'expenses/detail/:id', component: ExpenseEntryComponent, canActivate: [ExpenseGuard] },
-  { path: '', redirectTo: 'expenses', pathMatch: 'full' }
-]
 
 @NgModule({
   declarations: [
@@ -43,9 +33,7 @@ const routes: Routes = [
     MatIconModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
   ],
-  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
