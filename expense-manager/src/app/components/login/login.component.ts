@@ -20,6 +20,10 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
+    this.formData = new FormGroup({
+      userName: new FormControl("admin"),
+      password: new FormControl("admin"),
+    });
   }
 
   onClickSubmit(data: any) {

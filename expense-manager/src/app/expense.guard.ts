@@ -16,9 +16,9 @@ export class ExpenseGuard implements CanActivate {
     let url: string = state.url;
     return this.checkLogin(url);
   }
-  checkLogin(url: string): boolean | UrlTree {
+  checkLogin(url: string): any {
     console.log("Url: " + url)
-    let val: string | null = localStorage.getItem('isUserLoggedIn');
+    let val: string = localStorage.getItem('isUserLoggedIn') || '';
 
     if (val != null && val == "true") {
       if (url == "/login") this.router.parseUrl('/expenses');
@@ -26,7 +26,5 @@ export class ExpenseGuard implements CanActivate {
     } else {
       return this.router.parseUrl('/login');
     }
-
-    return true;
   }
 }
