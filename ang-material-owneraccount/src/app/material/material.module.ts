@@ -7,7 +7,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -20,7 +24,12 @@ import { MatMenuModule } from '@angular/material/menu';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
   ],
   exports: [
     MatTabsModule,
@@ -29,7 +38,12 @@ import { MatMenuModule } from '@angular/material/menu';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
   ]
 })
 export class MaterialModule { }

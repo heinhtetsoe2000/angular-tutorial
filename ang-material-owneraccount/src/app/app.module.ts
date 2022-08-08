@@ -10,6 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/navigation/header/header.component';
 import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OwnerModule } from './owner/owner.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SidenavListComponent } from './components/navigation/sidenav-list/siden
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    OwnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
