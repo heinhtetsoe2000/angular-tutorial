@@ -1,0 +1,4 @@
+<h1>The Eternals</h1>
+<h3>The Leader of the Eteranls is {{ heroes[0] }}.</h3>
+<p>The number of team member is {{ heroes.length }}.</p>
+<app-child *ngFor="let hero of heroes" [hero]="hero"></app-child>
